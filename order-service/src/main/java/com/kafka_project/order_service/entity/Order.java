@@ -1,7 +1,6 @@
 package com.kafka_project.order_service.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Order {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
     private String name;
     private int quantity;
